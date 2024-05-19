@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulk Message Sender</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #f9f5e8; /* Creamy background color */
+            color: #fff; /* White text color */
+        }
+        .animated-name {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 20px;
+            color: red; /* Red text color */
+            animation: animateName 1s; /* Animation for name */
+        }
+        @keyframes animateName {
+            0% { color: red; }
+            100% { color: #fff; } /* White text color */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="animated-name">Chetan Thorat</h1> <!-- Animated name -->
+        <h1>Bulk Message Sender</h1>
+        <form id="messageForm">
+            <label for="message">Message:</label>
+            <textarea id="message" rows="4" cols="50" required></textarea>
+            <h2>Selecting and Unselecting Followers Instrunction:</h2> 
+                <p>To select a follower: Click on the name of the follower in the list.
+                The selected follower will appear in the "Selected Followers" section below.
+                To unselect a follower:
+                
+                Click on the name of the selected follower in the "Selected Followers" section.
+                The follower will be removed from the selected list.</p>
+
+            <button type="submit">Send Message</button>
+        </form>
+        <br>
+        <br>
+        <div id="followersList">
+            <!-- Followers will be displayed here -->
+        </div>
+        <div id="selectedFollowers">
+            <h2>Selected Followers:</h2>
+            <!-- Selected followers will be displayed here -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
